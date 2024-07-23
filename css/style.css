@@ -1,0 +1,484 @@
+:root {
+    --primary: #FCFDFF;
+    --bg:#FCFDFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: black;
+    /* min-height: 2000px; */
+}
+
+/* navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color:#476188;
+    border-bottom: 1px solid #FCFDFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 8000;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color:#FCFDFF;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.kitchen {
+    color:#E52423;
+}
+
+.number {
+    color:#E52423;
+}
+
+.navbar .navbar-nav a {
+    color:#FCFDFF;
+    display: inline-block;
+    margin: 0 1rem;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.navbar .navbar-nav a:hover {
+    color: #FCFDFF;
+}
+
+/* navbar underline transition */
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid #FCFDFF;
+;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+    color: #FCFDFF;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: #FCFDFF;
+}
+
+#menu {
+    display: none;
+}
+
+/* Hero section */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../img/danus.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg,rgb(228, 230, 232) 8%, rgb(71, 94, 136,) 50%);
+}
+
+.hero .konten {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .konten h1 {
+    font-size: 4rem;
+    color:black;
+    line-height: 1.2;
+}
+
+.hero .konten h1 span {
+    color: #E52423;
+}
+
+.hero .konten p {
+    font-size: 1.6rem;
+    color:black;
+    line-height: 1.4;
+    /* mix-blend-mode: difference;*/
+}
+
+.hero .konten .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: #FCFDFF;
+    background-color: #476188;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    text-decoration: none;
+}
+
+.hero .konten .cta:hover {
+    background-color:#FCFDFF ;
+    color: #476188;
+}
+
+/* tentang kami */
+.about, .produk, .kontak {
+    padding: 8rem 7% 1.4rem;
+}
+
+.about h2, .produk h2, .kontak h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.about h2 span, .produk h2 span, .kontak h2 span  {
+    color: #E52423;
+}
+
+.about .row {
+    display: flex;
+}
+
+.about .row .about-img {
+    flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+    width: 80%;
+}
+
+.about .row .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.about .row .content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.about .row .content p {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.produk h2, .kontak h2 {
+    margin-bottom: 1rem;
+}
+
+.produk p, .kontak p {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* .produk .item-center h1 {
+    display: inline-block;
+    margin-bottom: 1.6rem;
+    margin-top: 1.6rem;
+    font-size: 1.8rem;
+} */
+
+.produk .d-flex a {
+    color:#476188;
+    text-decoration: none;
+}
+
+.produk .d-flex a:hover {
+    color: #FCFDFF;
+}
+
+.produk .form-select {
+    width: 200px;
+    height: 50px;
+    margin-left: 50rem;
+    text-align: center;
+}
+
+.modal {
+    z-index: 9999;
+}
+
+.modalImage img {
+    height: auto;
+    max-width: 450px;
+}
+
+/* kontak section */
+.kontak .row {
+    display: flex;
+    margin-top: 2rem;
+    background-color: rgb(167, 167, 167);
+}
+
+.kontak .row .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+    height: 400px;
+    object-position: left;
+}
+
+.kontak .row .konten {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.kontak .row .konten h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.kontak .row .konten p {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.kontak .konten .ctb {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    margin-left: 8rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: #FCFDFF;
+    background-color: #476188;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    text-decoration: none;
+    object-position: center;
+}
+
+.kontak .konten .ctb:hover {
+    color: #476188;
+    background-color: #FCFDFF;
+    transition: 0.2s linear;
+}
+
+footer {
+    background-color: #476188;
+    text-align: center;
+    padding: 1rem 0 3rem;
+    margin-top: 3rem;
+}
+
+footer .social {
+    padding: 1rem 0;
+}
+
+footer .social a {
+    color: #FCFDFF;
+    margin: 1rem;
+}
+
+footer .social a:hover, footer .links a:hover {
+    color: #6b6b6b;
+}
+
+footer .links {
+    margin-bottom: 1.4rem;
+}
+
+footer .links a {
+    color: #FCFDFF;
+    padding: 0.7rem 1rem;
+    text-decoration: none;
+}
+
+footer .credit {
+    font-size: 0.8rem;
+}
+
+footer .credit a {
+    color: #FCFDFF;
+    font-weight: 700;
+    text-decoration: none;
+}
+/* media queries */
+
+/* laptop */
+@media (max-width: 1366px) {
+    html {
+    font-size: 90%;
+    }
+}
+/* tab */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+    #menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #476188;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+    color: #FCFDFF;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+    }
+
+    .about .row {
+        flex-wrap: wrap;
+    }
+
+    .about .row .about-img img {
+        height: 30rem;
+        object-fit: cover;
+        width: 100%;
+        object-position: center;
+    }
+
+    .about .row .content {
+        padding: 0;
+    }
+
+    .about .row .content h3 {
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+
+    .about .row .content p {
+        font-size: 1.6rem;
+    }
+
+    .produk h1 {
+        font-size: 1.6rem;
+        margin-top: 1.5rem;
+    }
+
+    .produk .d-flex a {
+        font-size: 1.5rem;
+    }
+
+    .produk p, .kontak p {
+        font-size: 1.3rem;
+    }
+
+    .produk .form-select {
+        height: 50px;
+        font-size: 1.3rem;
+        width: 150px;
+        margin-bottom: 1rem;
+    }
+
+    .btnDetail {
+        font-size: 1.2rem;
+    }
+
+    .harga {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+            text-align: left;
+    }
+
+    .modalImage img {
+        height: auto;
+        /* max-width: 300px;
+        margin-left: 80px; */
+        margin-bottom: 1rem;
+    }
+
+    .modalDeskripsi {
+        font-size: 1.6rem;
+        margin-top: 1rem;
+    }
+
+    .btnBeli , .btnKembali {
+        font-size: 1.6rem;
+    }
+
+    .modalHarga {
+        font-size: 1.5rem;
+    }
+
+    /* .kontak .row {
+        flex-wrap: wrap;
+    } */
+
+    .kontak .konten .ctb {
+        margin-left: 10rem;
+    }
+
+    .kontak .row .map {
+        height: 300px;
+    }
+
+    .kontak .row .konten h3 {
+        font-size: 2rem;
+    }
+}
+/* mobile */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
